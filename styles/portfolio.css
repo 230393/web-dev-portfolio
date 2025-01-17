@@ -167,6 +167,9 @@ footer{
     display: flex;
     gap: 100px;
 }
+.footer-column{
+    width: 50%;
+}
 .footer-column input{
     width: 50%;
     height: 64px;
@@ -176,9 +179,30 @@ footer{
     margin-bottom: 20px;
     padding: 10px 20px;
 }
-footer input[type="text"]{
+footer input[type="text"], footer input[type=eamil], footer, textarea, {
     height: 64px;
     border-radius: 5px;
     background-color: white;
     display: block;
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 24px;
+    border: none;
+}
+.hide{
+    display: none;
+}
+@media screen and (max-width:576px) {
+    .skills-container, .resume-container, .secondary-bg, .about-items{
+        flex-direction: column;
+    }
+    footer, .about{
+        padding: 20px;
+    }
+    .footer-column{
+        width: 100%;
+    }
+    footer input[type="text"], footer input[type=eamil], footer textarea{
+        width: calc(100% -40px);
+    }
 }
